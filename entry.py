@@ -3,6 +3,8 @@ from utils import logit
 from scraper import scraper
 from nlp import build_tfidf
 
+from keybert import KeyBERT
+
 args = sys.argv[1:]
 apps = (args + [None, None])[:2]
 google_package, apple_name = apps[0], apps[1]
@@ -24,5 +26,9 @@ def nlp():
 
 
 if __name__ == "__main__":
-    # scrap()
-    nlp()
+    scrap()
+    # nlp()
+    # keybert_model = KeyBERT()
+    # with open("documents", "r") as _rf:
+    #     content = _rf.readlines()
+    #     keybert_model.extract_keywords(content, keyphrase_ngram_range=(1, 2))
