@@ -5,5 +5,5 @@
 *.log
 *.rdb
 venv/
-documents
-tfidf
+documents/
+keywords/
